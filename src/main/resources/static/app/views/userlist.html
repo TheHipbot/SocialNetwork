@@ -1,0 +1,10 @@
+<div class="user-list col-xs-12 col-sm-3">
+  <h4>Connected Followers</h4>
+  <ul >
+    <li ng-repeat="user in connectedFollowers">{{user}}</li>
+  </ul>
+  <h4>Connected Users</h4>
+  <ul >
+    <li ng-repeat="(id, name) in allConnectedUsers">{{name}} <a ng-href ng-click="followUser(id)">Follow</a></li>
+  </ul>
+</div>

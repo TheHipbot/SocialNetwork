@@ -1,0 +1,14 @@
+<div class="jumbotron">
+  <h1>Akka-Chat</h1>
+  <p class="lead">
+    Welcome to the chat
+  </p>
+  <p><a class="btn btn-lg" ng-class="{'btn-success': connected, 'btn-danger': !connected}" ng-href="#/">
+    {{connectedText}} <span class="glyphicon" ng-class="{'glyphicon-ok': connected, 'glyphicon-remove': !connected}"></span>
+  </a></p>
+  <form ng-show="register" name="registration-form" action="#">
+    <p>Please enter user name: </p>
+    <input type="text" ng-model="name" />
+    <input type="button" value="Register" ng-click="submitRegistration()">
+  </form>
+</div>

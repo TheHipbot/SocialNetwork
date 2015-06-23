@@ -1,0 +1,21 @@
+<div class="col-xs-12 col-sm-9">
+  <form name="tweet-form">
+    <label>Hash</label>
+    <input type="hash" ng-model="form.hash" />
+    <label>Tweet</label>
+    <input type="msg" ng-model="form.msg" />
+    <input type="button" value="New Tweet" ng-click="createTweet()">
+  </form>
+  <h4>Search Hash</h4>
+  <form name="search-form">
+    <input type="hash" ng-model="searchHash" />
+    <input type="button" value="Search" ng-click="searchByHash()">
+  </form>
+  <div ng-repeat="tweet in hashTweets">
+    <p>{{tweet.name}}: #{{tweet.hash}} {{tweet.msg}}</p>
+  </div>
+  <h4>Tweets</h4>
+  <div ng-repeat="tweet in tweets">
+    <p>{{tweet.name}}: #{{tweet.hash}} {{tweet.msg}}</p>
+  </div>
+</div>
